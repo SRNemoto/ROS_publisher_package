@@ -20,6 +20,13 @@ int main(int argc, char **argv)
      */
     ros::init(argc, argv, "talker");
 
+    /**
+     * NodeHandle is the main access point to communications with the ROS system.
+     * The first NodeHandle constructed will fully initialize this node, and the last
+     * NodeHandle destructed will close down the node.
+     */
+    ros::NodeHandle n;
+
      /**
       * The advertise() function is how you tell ROS that you want to
       * publish on a given topic name. This invokes a call to the ROS
